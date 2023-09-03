@@ -7,7 +7,7 @@ import { Text } from './src/components/Text/Text';
 function App(): JSX.Element {
   return (
     <SafeAreaView>
-     <Text>Nubble App</Text>
+     <Text preset='paragraphCaption'>Nubble App</Text>
     </SafeAreaView>
   );
 }
