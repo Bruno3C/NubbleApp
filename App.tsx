@@ -12,7 +12,7 @@ function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme} >
       <SafeAreaView style={{ padding: 10}}>
-        <Button title="Confirmar"/>
+        <Button title="Confirmar" backgroundColor="carrotSecondary"/>
       </SafeAreaView>
     </ThemeProvider>
   );
