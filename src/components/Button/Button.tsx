@@ -16,9 +16,10 @@ export function Button({
   title, 
   loading, 
   preset = 'primary',
+  disabled,
   ...touchableOpacityBoxProps
 }: ButtonProps) {
-  const buttonPreset = buttonPresets[preset];
+  const buttonPreset = buttonPresets[preset][disabled? 'disabled': 'default'];
   return (
     <TouchableOpacityBox
       paddingHorizontal="s20"
@@ -26,6 +27,7 @@ export function Button({
       alignItems="center"
       justifyContent="center"
       activeOpacity={.7}
+      disabled={disabled || loading}
       borderRadius="s16"
       {...buttonPreset.container}
       {...touchableOpacityBoxProps}>
