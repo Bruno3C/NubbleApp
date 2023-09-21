@@ -5,13 +5,23 @@ import { theme } from './src/theme/theme';
 import { Button } from './src/components/Button/Button';
 import { EyeOffIcon } from './src/assets/icons/EyeOffIcon';
 import { Icon } from './src/components/Icon/Icon';
+import { Text } from './src/components/Text/Text';
+import { Box } from './src/components/Box/Box';
+import { TextInput } from './src/components/TextInput/TextInput';
 
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme} >
       <SafeAreaView style={{ padding: 10}}>
-        <Button title="Confirmar"/>
-        <Icon name='eyeOn' />
+        <Text preset='headingLarge' marginBottom='s8'>Olá!</Text>
+        <Text preset='paragraphLarge' mb='s40'>Digite seu e-mail e senha para entrar</Text>
+        <TextInput label='E-mail' placeholder='Digite seu e-mail'/>
+        <TextInput label='Senha' placeholder='Digite sua senha'/>
+        <Text color='primary' preset='paragraphSmall' bold mt='s10'>
+          Esqueci minha senha
+        </Text>
+        <Button mt="s48" title='Entrar'/>
+        <Button mt="s12" title='Criar uma conta' preset='outline'/>
       </SafeAreaView>
     </ThemeProvider>
   );
