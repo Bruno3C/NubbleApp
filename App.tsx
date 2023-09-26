@@ -15,9 +15,19 @@ function App(): JSX.Element {
       <SafeAreaView style={{ padding: 10}}>
         <Text preset='headingLarge' marginBottom='s8'>Olá!</Text>
         <Text preset='paragraphLarge' mb='s40'>Digite seu e-mail e senha para entrar</Text>
-        <TextInput label='E-mail' placeholder='Digite seu e-mail'/>
-        <TextInput label='Senha' placeholder='Digite sua senha'/>
-        <Text color='primary' preset='paragraphSmall' bold mt='s10'>
+        <TextInput 
+          label='E-mail' 
+          placeholder='Digite seu e-mail'
+          boxProps={{ mb: 's20' }}
+        />
+        <TextInput 
+          label='Senha' 
+          placeholder='Digite sua senha' 
+          errorMessage='Digite a senha'
+          RightComponent={<Icon name='eyeOn' color='gray2'/>}
+          boxProps={{ mb: 's10' }}
+        />
+        <Text color='primary' preset='paragraphSmall' bold >
           Esqueci minha senha
         </Text>
         <Button mt="s48" title='Entrar'/>
