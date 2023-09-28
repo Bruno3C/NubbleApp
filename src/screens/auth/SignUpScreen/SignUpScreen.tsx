@@ -1,7 +1,6 @@
 import React from 'react';
 
 import { Button } from '../../../components/Button/Button';
-import { Icon } from '../../../components/Icon/Icon';
 import { Text } from '../../../components/Text/Text';
 import { TextInput } from '../../../components/TextInput/TextInput';
 import { Screen } from '../../../components/Screen/Screen';

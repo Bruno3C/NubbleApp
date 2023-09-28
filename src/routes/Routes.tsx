@@ -12,10 +12,13 @@ export function Router() {
     <NavigationContainer>
       <Stack.Navigator
         initialRouteName='LoginScreen'
-        screenOptions={{ headerShown: false }}
+        screenOptions={{ 
+          headerShown: false,
+          fullScreenGestureEnabled: true
+        }}
       >
         <Stack.Screen name='LoginScreen' component={LoginScreen}/>
-        <Stack.Screen name='SignUpScreen ' component={SignUpScreen}/>
+        <Stack.Screen name='SignUpScreen' component={SignUpScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   )

@@ -6,7 +6,12 @@ import { TextInput } from '../../../components/TextInput/TextInput';
 import { Screen } from '../../../components/Screen/Screen';
 import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 
-export function LoginScreen() {
+export function LoginScreen({ navigation }) {
+
+  function navigateToSignUpScreen() {
+    navigation.navigate('SignUpScreen');
+  }
+
   return(
     <Screen scrollable>
       <Text preset='headingLarge' marginBottom='s8'>Olá!</Text>
@@ -25,7 +30,12 @@ export function LoginScreen() {
         Esqueci minha senha
       </Text>
       <Button mt="s48" title='Entrar'/>
-      <Button mt="s12" title='Criar uma conta' preset='outline'/>
+      <Button 
+        mt="s12" 
+        preset='outline' 
+        title='Criar uma conta' 
+        onPress={navigateToSignUpScreen}
+      />
     </Screen>
   )
 }
