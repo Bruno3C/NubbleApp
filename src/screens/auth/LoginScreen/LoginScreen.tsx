@@ -8,6 +8,7 @@ import { Text } from '../../../components/Text/Text';
 import { Box } from '../../../components/Box/Box';
 import { TextInput } from '../../../components/TextInput/TextInput';
 import { Screen } from '../../../components/Screen/Screen';
+import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 
 export function LoginScreen() {
   return(
@@ -19,10 +20,9 @@ export function LoginScreen() {
         placeholder='Digite seu e-mail'
         boxProps={{ mb: 's20' }}
       />
-      <TextInput 
+      <PasswordInput 
         label='Senha' 
         placeholder='Digite sua senha' 
-        RightComponent={<Icon name='eyeOn' color='gray2'/>}
         boxProps={{ mb: 's10' }}
       />
       <Text color='primary' preset='paragraphSmall' bold >

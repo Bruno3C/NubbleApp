@@ -5,6 +5,7 @@ import { Icon } from '../../../components/Icon/Icon';
 import { Text } from '../../../components/Text/Text';
 import { TextInput } from '../../../components/TextInput/TextInput';
 import { Screen } from '../../../components/Screen/Screen';
+import { PasswordInput } from '../../../components/PasswordInput/PasswordInput';
 
 export function SignUpScreen() {
 
@@ -32,10 +33,9 @@ export function SignUpScreen() {
         placeholder='Digite seu e-mail'
         boxProps={{ mb: 's20' }}
       />
-      <TextInput 
+      <PasswordInput
         label='Senha' 
-        placeholder='Digite sua senha' 
-        RightComponent={<Icon name='eyeOn' color='gray2'/>}
+        placeholder='Digite sua senha'
         boxProps={{ mb: 's48' }}
       />
       <Button title='Entrar' onPress={submitForm}/>
