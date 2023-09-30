@@ -8,14 +8,15 @@ import { RootStackParamList } from '../../../routes/Routes';
 
 
 type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SuccessScreen'>;
-export function SuccessScreen({ route  }: ScreenProps) {
+export function SuccessScreen({ navigation, route }: ScreenProps) {
 
   function goBackToBegin() {
     // TODO: navegar para tela de login
+    navigation.goBack();
   }
 
   return(
-    <Screen canGoBack>
+    <Screen>
       <Icon {...route.params.icon} /> 
       <Text preset='headingLarge' mt="s24">{route.params?.title}</Text>
       <Text preset='paragraphLarge' mt="s16">{route.params?.description}</Text>
