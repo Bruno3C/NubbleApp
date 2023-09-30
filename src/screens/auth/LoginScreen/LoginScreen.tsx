@@ -12,7 +12,7 @@ type ScreenProps = NativeStackScreenProps<RootStackParamList, 'LoginScreen'>;
 export function LoginScreen({ navigation }: ScreenProps) {
 
   function navigateToSignUpScreen() {
-    navigation.navigate('SignUpScreen');
+    navigation.navigate('SuccessScreen', { icon: 'BellOn', title: 'Teste', description: 'Teste'});
   }
 
   return(
