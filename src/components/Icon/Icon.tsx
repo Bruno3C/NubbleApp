@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pressable} from 'react-native';
-import { ThemeColors } from '../../theme/theme';
-import { useAppTheme } from '../../hooks/useAppTheme';
+import { ThemeColors } from '@theme';
+import { useAppTheme } from '@hooks';
 
 import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
 import {ArrowRightIcon} from '../../assets/icons/ArrowRightIcon';
@@ -33,7 +33,6 @@ import {ProfileIcon} from '../../assets/icons/ProfileIcon';
 import {SearchIcon} from '../../assets/icons/SearchIcon';
 import {SettingsIcon} from '../../assets/icons/SettingsIcon';
 import {TrashIcon} from '../../assets/icons/TrashIcon';
-
 export interface IconBase {
   size?: number;
   color?: string;
