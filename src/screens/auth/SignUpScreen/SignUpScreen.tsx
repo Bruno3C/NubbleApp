@@ -21,6 +21,7 @@ type ScreenProps = NativeStackScreenProps<RootStackParamList, 'SignUpScreen'>;
 export function SignUpScreen({}: ScreenProps) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const {reset} = useResetNavigationSuccess();
+
   const {control, formState, handleSubmit} = useForm<SignUpSchema>({
     resolver: zodResolver(signUpSchema),
     defaultValues: {
