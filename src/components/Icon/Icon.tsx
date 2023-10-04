@@ -1,7 +1,8 @@
 import React from 'react';
 import {Pressable} from 'react-native';
-import { ThemeColors } from '@theme';
-import { useAppTheme } from '@hooks';
+
+import {useAppTheme} from '@hooks';
+import {ThemeColors} from '@theme';
 
 import {ArrowLeftIcon} from '../../assets/icons/ArrowLeftIcon';
 import {ArrowRightIcon} from '../../assets/icons/ArrowRightIcon';
@@ -44,8 +45,13 @@ export interface IconProps {
   onPress?: () => void;
 }
 
-export function Icon({name, color = 'backgroundContrast', size, onPress }: IconProps) {
-  const { colors } = useAppTheme();
+export function Icon({
+  name,
+  color = 'backgroundContrast',
+  size,
+  onPress,
+}: IconProps) {
+  const {colors} = useAppTheme();
   const SVGIcon = iconRegistry[name];
 
   if (onPress) {

@@ -4,10 +4,7 @@ import {Svg, Path, Circle} from 'react-native-svg';
 
 import {IconBase} from '../../components/Icon/Icon';
 
-export function CheckRoundIcon({
-  size = 48,
-  color = 'black',
-}: IconBase) {
+export function CheckRoundIcon({size = 48, color = 'black'}: IconBase) {
   return (
     <Svg width={size} height={size} viewBox="0 0 48 48" fill="none">
       <Circle cx="24" cy="24" r="24" fill={color} />
