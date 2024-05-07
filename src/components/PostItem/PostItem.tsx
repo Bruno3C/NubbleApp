@@ -3,6 +3,7 @@ import React from 'react';
 import {Post} from '@domain';
 
 import {Box} from '@components';
+
 import {PostHeader} from './components/PostHeader';
 import {PostImage} from './components/PostImage';
 

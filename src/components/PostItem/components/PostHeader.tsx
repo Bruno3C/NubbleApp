@@ -1,6 +1,9 @@
-import {Box, Text} from '@components';
-import {Post} from '@domain';
+import React from 'react';
 import {Image} from 'react-native';
+
+import {Post} from '@domain';
+
+import {Box, Text} from '@components';
 
 type Props = Pick<Post, 'author'>;
 
