@@ -62,6 +62,7 @@ export function AppTabBar({state, descriptors, navigation}: BottomTabBarProps) {
             accessibilityState={isFocused ? {selected: true} : {}}
             accessibilityLabel={options.tabBarAccessibilityLabel}
             testID={options.tabBarTestID}
+            key={options.title}
             onPress={onPress}
             onLongPress={onLongPress}
             style={{flex: 1}}>
