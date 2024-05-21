@@ -37,7 +37,7 @@ export function HomeScreen({}: AppTabScreenProps<'HomeScreen'>) {
         showsVerticalScrollIndicator={false}
         data={postList}
         contentContainerStyle={{flex: postList.length === 0 ? 1 : undefined}}
-        keyExtractor={item => item.id}
+        keyExtractor={item => item.id.toString()}
         onEndReached={fetchNextPage}
         onEndReachedThreshold={0.1}
         refreshing={loading}
