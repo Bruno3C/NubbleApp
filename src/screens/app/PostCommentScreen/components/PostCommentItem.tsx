@@ -13,7 +13,7 @@ export function PostCommentItem({postComment}: {postComment: PostComment}) {
           {postComment.author.userName}
         </Text>
         <Text preset="paragraphSmall" color="gray1">
-          {postComment.message}
+          {postComment.message} - {postComment.createdAtRelative}
         </Text>
       </Box>
     </Box>
