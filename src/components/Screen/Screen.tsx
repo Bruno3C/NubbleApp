@@ -4,22 +4,24 @@ import {KeyboardAvoidingView, Platform} from 'react-native';
 import {Box, BoxProps} from '@components';
 import {useAppSafeArea, useAppTheme} from '@hooks';
 
-import {ScrollViewContainer, ViewContainer} from './components/ScreenContainer';
-import {ScreenHeader} from './components/ScreenHeader';
+import {ScrollViewContainer, ViewContainer, ScreenHeader} from './components';
 
 export interface ScreenProps extends BoxProps {
   children: React.ReactNode;
   canGoBack?: boolean;
   scrollable?: boolean;
   title?: string;
+  noPaddingHorizontal?: boolean;
 }
 
 export function Screen({
   children,
   canGoBack = false,
   scrollable = false,
+  noPaddingHorizontal = false,
   style,
   title,
+  ...boxProps
 }: ScreenProps) {
   const {top, bottom} = useAppSafeArea();
   const {colors} = useAppTheme();
@@ -31,9 +33,14 @@ export function Screen({
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
       <Container backgroundColor={colors.background}>
         <Box
-          paddingHorizontal="s24"
-          style={[{paddingTop: top, paddingBottom: bottom}, style]}>
-          <ScreenHeader canGoBack={canGoBack} title={title} />
+          paddingHorizontal={noPaddingHorizontal ? undefined : 's24'}
+          style={[{paddingTop: top, paddingBottom: bottom}, style]}
+          {...boxProps}>
+          <ScreenHeader
+            paddingHorizontal={noPaddingHorizontal ? 's24' : undefined}
+            canGoBack={canGoBack}
+            title={title}
+          />
           {children}
         </Box>
       </Container>
